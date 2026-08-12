@@ -497,9 +497,7 @@ button.submit:focus-visible{outline:3px solid var(--accent);outline-offset:2px;}
   const MONTHS = ["January","February","March","April","May","June",
                   "July","August","September","October","November","December"];
   MONTHS.forEach(m => gradMonth.add(new Option(m, m)));
-  const thisYear = new Date().getFullYear();
-  for (let y = thisYear; y <= thisYear + 6; y++) gradYear.add(new Option(y, y));
-
+  for (let y = 2030; y >= 2001; y--) gradYear.add(new Option(y, y));
   /* ── Resume handling ── */
   let chosenFile = null;
   const drop = $("drop"), input = $("resume"), picked = $("picked");
